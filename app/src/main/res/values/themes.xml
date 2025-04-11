@@ -1,9 +1,21 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Life" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Black" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Основные цвета -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/black</item>
+        <item name="android:windowBackground">@color/black</item>
+
+        <!-- Убираем "подсветку" системных элементов -->
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+        <!-- Отключаем анимации переходов -->
+        <item name="android:windowAnimationStyle">@null</item>
+
     </style>
 
-    <style name="Theme.Life" parent="Base.Theme.Life" />
 </resources>
