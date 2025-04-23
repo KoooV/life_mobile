@@ -16,6 +16,8 @@
         <!-- Отключаем анимации переходов -->
         <item name="android:windowAnimationStyle">@null</item>
 
-    </style>
+
+
+     </style>
 
 </resources>
