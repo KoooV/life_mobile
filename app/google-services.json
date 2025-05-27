@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "285896631054",
+    "project_id": "life-messenger-751ab",
+    "storage_bucket": "life-messenger-751ab.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285896631054:android:0ab3a985c0967d737fed5f",
+        "android_client_info": {
+          "package_name": "com.example.life"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUDDfiKANqd7BsVABYf4elszTKU7rL_Xo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
