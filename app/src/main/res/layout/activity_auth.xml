@@ -34,9 +34,11 @@
         android:layout_width="222dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
-        android:drawableStart="@drawable/auth_edittext"
+        android:background="@drawable/auth_edittext"
         android:drawablePadding="8dp"
-        android:hint="Email*"
+        android:hint=" Email*"
+        android:textColor="#00E676"
+        android:textColorHint="#888888"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/view"
@@ -47,7 +49,12 @@
         android:layout_width="222dp"
         android:layout_height="61dp"
         android:layout_marginTop="12dp"
-        android:drawableStart="@drawable/auth_edittext"
+        android:background="@drawable/auth_edittext"
+        android:drawablePadding="8dp"
+        android:hint=" Password*"
+        android:inputType="textVisiblePassword"
+        android:textColor="#00E676"
+        android:textColorHint="#888888"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/view"
@@ -65,18 +72,17 @@
         app:layout_constraintTop_toBottomOf="@+id/auth_password"
         app:srcCompat="@drawable/auth_entrbtn" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
+    <TextView
+        android:id="@+id/registerTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:background="@color/gray"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        android:layout_marginTop="16dp"
+        android:text="No account? REGISTER"
+        android:textColor="#00E676"
+        android:textSize="14sp"
+        android:fontFamily="monospace"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/auth_entrBtn"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/auth_regbtn" />
-
+        app:layout_constraintTop_toBottomOf="@+id/auth_entrBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

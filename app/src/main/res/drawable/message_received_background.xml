@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#E0E0E0" /> <!-- Пример светлого цвета -->
+    <corners
+        android:topLeftRadius="12dp"
+        android:topRightRadius="12dp"
+        android:bottomLeftRadius="4dp"
+        android:bottomRightRadius="12dp" /> <!-- Нижний левый угол менее скруглен -->
+</shape> 
