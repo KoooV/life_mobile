@@ -54,7 +54,7 @@
         android:background="@drawable/auth_edittext"
         android:drawablePadding="8dp"
         android:hint="Password*"
-        android:inputType="textVisiblePassword"
+        android:inputType="textPassword"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:textColor="#00E676"

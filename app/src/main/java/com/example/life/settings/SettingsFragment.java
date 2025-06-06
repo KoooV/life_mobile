@@ -1,9 +1,13 @@
 package com.example.life.settings;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -46,9 +50,26 @@ public class SettingsFragment extends Fragment {
 
         // Отображаем UID пользователя
         if (user != null) {
-            binding.uidTextView.setText("Ваш ID: " + user.getUid());
+            binding.uidTextView.setText(user.getUid());
+            binding.uidTextView.setTextColor(0xFF00E676); // Зеленый цвет в формате ARGB
+            
+            // Настраиваем обработчик нажатия на кнопку копирования
+            binding.copyButton.setOnClickListener(v -> {
+                // Получаем ID пользователя
+                String userId = user.getUid();
+                
+                // Копируем ID в буфер обмена
+                ClipboardManager clipboard = (ClipboardManager) requireContext().getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText("User ID", userId);
+                clipboard.setPrimaryClip(clip);
+                
+                // Показываем уведомление об успешном копировании
+                Toast.makeText(requireContext(), "ID скопирован в буфер обмена", Toast.LENGTH_SHORT).show();
+            });
         } else {
-            binding.uidTextView.setText("Ваш ID: Недоступен");
+            binding.uidTextView.setText("ID недоступен");
+            binding.uidTextView.setTextColor(0xFF00E676); // Зеленый цвет в формате ARGB
+            binding.copyButton.setVisibility(View.GONE);
         }
 
         // Обработка нажатия кнопки Назад

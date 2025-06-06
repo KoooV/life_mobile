@@ -8,27 +8,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:gravity="center_vertical">
 
         <EditText
             android:id="@+id/user_id_edit_text"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:background="@drawable/auth_edittext"
+            android:drawablePadding="8dp"
             android:hint="Введите ID пользователя"
-            android:padding="8dp"
-            android:textColorHint="#666666"
-            android:textColor="#000000"/>
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="#00E676"
+            android:textColorHint="#888888" />
 
         <ImageButton
             android:id="@+id/add_user_button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginStart="8dp"
             android:background="@drawable/chat_add_button"
             android:src="@android:drawable/ic_input_add"
-            android:tint="#FFFFFF"/>
+            android:tint="#FFFFFF" />
 
     </LinearLayout>
 
@@ -41,8 +44,8 @@
 
     <ImageButton
         android:id="@+id/settings_button"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="end"
         android:layout_margin="16dp"
         android:background="@drawable/chat_settings_button"
