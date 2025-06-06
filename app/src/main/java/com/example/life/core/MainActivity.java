@@ -2,18 +2,17 @@ package com.example.life.core;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.life.R;
 import com.example.life.chat.ChatListFragment;
 import com.example.life.chat.MessengerFragment;
 import com.example.life.settings.SettingsFragment;
+import com.example.life.auth.BaseActivity;
 
 /**
  * Главная активность приложения, которая управляет навигацией между фрагментами.
  * Реализует интерфейсы для обработки взаимодействия с фрагментами чата и настроек.
  */
-public class MainActivity extends AppCompatActivity implements MessengerFragment.OnMenuButtonClickListener, ChatListFragment.OnSettingsButtonClickListener, ChatListFragment.OnChatSelectedListener {
+public class MainActivity extends BaseActivity implements MessengerFragment.OnMenuButtonClickListener, ChatListFragment.OnSettingsButtonClickListener, ChatListFragment.OnChatSelectedListener {
 
     /**
      * Инициализация активности и установка начального фрагмента.
