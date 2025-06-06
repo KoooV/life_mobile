@@ -1,4 +1,4 @@
-package com.example.life;
+package com.example.life.chat;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,12 +8,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.life.model.Chat;
+import com.example.life.R;
+import com.example.life.chat.model.Chat;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder> {
 

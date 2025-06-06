@@ -26,7 +26,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
-            android:background="@drawable/auth_entrbtn"
+            android:background="@drawable/chat_add_button"
             android:src="@android:drawable/ic_input_add"
             android:tint="#FFFFFF"/>
 
@@ -45,8 +45,9 @@
         android:layout_height="48dp"
         android:layout_gravity="end"
         android:layout_margin="16dp"
-        android:background="@drawable/auth_entrbtn"
+        android:background="@drawable/chat_settings_button"
         android:src="@android:drawable/ic_menu_manage"
-        android:tint="#FFFFFF"/>
+        android:tint="#FFFFFF"
+        android:tintMode="src_in"/>
 
 </LinearLayout> 

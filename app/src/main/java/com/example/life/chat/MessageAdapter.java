@@ -1,4 +1,4 @@
-package com.example.life;
+package com.example.life.chat;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.life.model.Message;
+import com.example.life.R;
+import com.example.life.chat.model.Message;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.life.model;
+package com.example.life.chat.model;
 
 public class Message {
     private String id;

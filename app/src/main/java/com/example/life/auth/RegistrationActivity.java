@@ -1,4 +1,4 @@
-package com.example.life;
+package com.example.life.auth;
 
 import android.os.Bundle;
 import android.view.View;

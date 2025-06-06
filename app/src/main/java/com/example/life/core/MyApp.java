@@ -1,4 +1,4 @@
-package com.example.life;
+package com.example.life.core;
 
 import android.app.Application;
 

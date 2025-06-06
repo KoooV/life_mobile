@@ -1,18 +1,25 @@
-package com.example.life;
+package com.example.life.core;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.example.life.R;
+import com.example.life.chat.ChatListFragment;
+import com.example.life.chat.MessengerFragment;
+import com.example.life.settings.SettingsFragment;
 
+/**
+ * Главная активность приложения, которая управляет навигацией между фрагментами.
+ * Реализует интерфейсы для обработки взаимодействия с фрагментами чата и настроек.
+ */
 public class MainActivity extends AppCompatActivity implements MessengerFragment.OnMenuButtonClickListener, ChatListFragment.OnSettingsButtonClickListener, ChatListFragment.OnChatSelectedListener {
 
+    /**
+     * Инициализация активности и установка начального фрагмента.
+     * Если savedInstanceState == null, значит это первый запуск активности,
+     * и мы устанавливаем ChatListFragment как начальный фрагмент.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +33,11 @@ public class MainActivity extends AppCompatActivity implements MessengerFragment
         }
     }
 
+    /**
+     * Обработчик нажатия кнопки меню в MessengerFragment.
+     * Переключает на фрагмент списка чатов (ChatListFragment).
+     * Использует addToBackStack для возможности возврата назад.
+     */
     @Override
     public void onMenuButtonClick() {
         // Переходим на ChatListFragment при нажатии кнопки меню в MessengerFragment
@@ -35,6 +47,11 @@ public class MainActivity extends AppCompatActivity implements MessengerFragment
                 .commit();
     }
 
+    /**
+     * Обработчик нажатия кнопки настроек в ChatListFragment.
+     * Переключает на фрагмент настроек (SettingsFragment).
+     * Использует addToBackStack для возможности возврата назад.
+     */
     @Override
     public void onSettingsButtonClick() {
         // Переходим на SettingsFragment при нажатии кнопки настроек в ChatListFragment
@@ -44,6 +61,14 @@ public class MainActivity extends AppCompatActivity implements MessengerFragment
                 .commit();
     }
 
+    /**
+     * Обработчик выбора чата в списке чатов.
+     * Создает новый экземпляр MessengerFragment с выбранным чатом
+     * и переключает на него.
+     * 
+     * @param chatId ID выбранного чата
+     * @param otherUserId ID собеседника
+     */
     @Override
     public void onChatSelected(String chatId, String otherUserId) {
         // Переходим в MessengerFragment с выбранным чатом

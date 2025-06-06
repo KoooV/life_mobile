@@ -1,4 +1,4 @@
-package com.example.life;
+package com.example.life.settings;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,10 +13,19 @@ import com.example.life.databinding.FragmentSettingsBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ * Фрагмент настроек приложения.
+ * Отображает информацию о текущем пользователе и предоставляет
+ * возможность возврата к предыдущему экрану.
+ */
 public class SettingsFragment extends Fragment {
 
     private FragmentSettingsBinding binding;
 
+    /**
+     * Создает и возвращает представление фрагмента.
+     * Использует ViewBinding для доступа к элементам интерфейса.
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -24,6 +33,10 @@ public class SettingsFragment extends Fragment {
         return binding.getRoot();
     }
 
+    /**
+     * Инициализирует компоненты интерфейса и настраивает обработчики событий.
+     * Отображает ID текущего пользователя и настраивает кнопку возврата.
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -47,6 +60,10 @@ public class SettingsFragment extends Fragment {
         });
     }
 
+    /**
+     * Очищает ресурсы при уничтожении представления фрагмента.
+     * Освобождает ссылку на binding для предотвращения утечек памяти.
+     */
     @Override
     public void onDestroyView() {
         super.onDestroyView();
